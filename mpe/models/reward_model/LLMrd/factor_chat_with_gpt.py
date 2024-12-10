@@ -121,7 +121,7 @@ def hetero_callgpt(env_name, map_name, save_dir,save=True, id=0, use_recheck=Fal
         model='gpt-4o'
         init_temperature = 1.0
         check_temperature = 0.3
-        host =  f'http://16.171.234.63:{port}/callgpt' 
+        host =  None
         out_content = inference(model, message, init_temperature, host, n=n, seed=seed)
         message.append({'role':'assistant','content':str(out_content)})
         all_message.append({'role':'assistant','content':str(out_content)})

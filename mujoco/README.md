@@ -20,7 +20,7 @@ python main.py --policy={policy} --env={env} --rd_method={rd_method}
 
 **env**: [Reacher-v4, HalfCheetah-v4, Walker2d-v4, HumanoidStandup-v4]
 
-**rd_method**: [LaRe_RRDu, LaRe_RD, RD, RRD, RRD_unbiased, IRCR, VIB]
+**rd_method**: [LaRe_RRDu, LaRe_RD, RD, RRD, RRD_unbiased, IRCR, VIB, Diaster]
 
 
 
