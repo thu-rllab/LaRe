@@ -109,6 +109,8 @@ class DDPG(object):
 		if self.reward_model is not None:
 			if 'RRD' in self.args.rd_method or self.args.rd_method=='VIB':
 				traj_state, traj_action, traj_next_state, traj_reward, traj_dense_reward, traj_not_done, traj_episode_return, traj_episode_length= replay_buffer.sample_traj(int(self.args.batch_size//self.args.rrd_k)) #bs,t,d
+			elif self.args.rd_method=='Diaster':
+				traj_state, traj_action, traj_next_state, traj_reward, traj_dense_reward, traj_not_done, traj_episode_return, traj_episode_length = replay_buffer.sample_traj(batch_size//4, length_priority=True) #bs,t,d
 			else:
 				traj_state, traj_action, traj_next_state, traj_reward, traj_dense_reward, traj_not_done, traj_episode_return, traj_episode_length = replay_buffer.sample_traj(max(int(batch_size//np.mean(replay_buffer.episode_length)), 1)) #bs,t,d
 			reward_model_loss = self.reward_model.update(traj_state, traj_action, traj_next_state, traj_episode_return, traj_episode_length)
