@@ -2,7 +2,6 @@
 import json
 import numpy as np
 import sys
-# sys.path.append('/home/quy/LLMrd_sa')
 
 factor_role_instrutor = f"ROLE INSTRUCTION: You are good at understanding tasks and writing python codes.\
 You should fully understand the provided task and describe the exact observation and action form in the current map. \
