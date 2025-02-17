@@ -2,11 +2,18 @@
 
 Code for AAAI-25 accepted paper: [**Latent Reward: LLM-Empowered Credit Assignment in Episodic Reinforcement Learning.**](https://arxiv.org/abs/2412.11120)
 
+![](./assets/LaReoverview.png)
+
+## Installation & Applications
+
 To run the code in **MuJoCo**, please refer to the "README.md" in the [mujoco/](mujoco/) directory.
 
 To run the code in **MPE**, please refer to the "README.md" in the [mpe/](mpe/) directory.
 
-Please consider citing:
+
+## Citation
+
+If you find this work useful, please cite our paper:
 ```
 @article{qu2024latent,
   title={Latent Reward: LLM-Empowered Credit Assignment in Episodic Reinforcement Learning},
